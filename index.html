@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+ 
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BMI Calculator</title>
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi" crossorigin="anonymous" />
+</head>
+<style>
+    body{
+        background-color: azure;
+    }
+    .calculator {
+        display: flex;
+        flex-direction: column;
+        width: fit-content;
+        height: min-content;
+        background-color: #f1f1f1;
+        padding: 50px;
+        border-radius: 10px;
+        box-shadow: 0 0 10px 0 rgba(0, 0, 0, 0.2);
+        margin: 0 auto;
+        margin-top: 50px;
+        flex-wrap: wrap;
+    }
+ 
+    .form {
+        margin: 40px auto 0 auto;
+    }
+ 
+    .input-value {
+        display: flex;
+        flex-direction: row;
+        justify-content: center;
+    }
+ 
+    #height,
+    #weight {
+        width: 400px;
+    }
+ 
+    #weight-unit,
+    #height-unit {
+        width: fit-content;
+    }
+ 
+    .input-value * {
+        margin: 0 5px;
+    }
+</style>
+ 
+<body>
+    <div class="calculator">
+        <h1 class="text-center">BMI Calculator</h1>
+        <div class="form">
+            <div class="mb-3">
+                <label class="form-label">
+                    Height:
+                    <div class="input-value">
+                        <input id="height" class="form-range" type="range" value="1" min="1" max="300" />
+                        <span id="height-value">0</span>
+                        
+                        <select id="height-unit" class="form-select">
+                            <option value="cm">cm</option>
+                            <option value="m">m</option>
+                            <option value="in">in</option>
+                            <option value="ft">ft</option>
+                        </select>
+                    </div>
+                </label class="form-label">
+            </div>
+            <div class="mb-3">
+                <label class="form-label">
+                    Weight:
+                    <div class="input-value">
+                        <input id="weight" class="form-range" type="range" value="1" min="1" max="300" />
+                        <span id="weight-value">0</span>
+                        
+                        <select id="weight-unit" class="form-select">
+                            <option value="kg">kg</option>
+                            <option value="g">g</option>
+                            <option value="lbs">lbs</option>
+                            <option value="oz">oz</option>
+                        </select>
+                    </div>
+                </label>
+            </div>
+        </div>
+        <div class="text-center">
+            <h1 class="bmi"></h1>
+            <h2 class="remark"></h2>
+        </div>
+        <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"
+            integrity="sha384-OERcA2EqjJCMA+/3y+gxIOqMEjwtxJY7qPCqsdltbNJuaOe923+mo//f6V8Qbsw3"
+            crossorigin="anonymous"></script>
+       
+        <script src="index.js"></script>
+ 
+</body>
+ 
+</html>
